@@ -8,13 +8,13 @@ const FlightsPage = () => {
   
   // Fetch available flights from the backend
   useEffect(() => {
-    axios.get('http://localhost:5000/api/flights')
+    axios.get('http://localhost:3000/api/flights')
       .then(response => setFlights(response.data))
       .catch(error => console.error("There was an error fetching flights!", error));
   }, []);
   
   const handleBookFlight = (flightId) => {
-    axios.post(`http://localhost:5000/api/bookings`, { flightId })
+    axios.post(`http://localhost:3000/api/bookings`, { flightId })
       .then(response => {
         alert("Flight booked successfully!");
       })

@@ -1,0 +1,73 @@
+/* src/FlightsPage.css */
+
+.container {
+    font-family: Arial, sans-serif;
+    padding: 200p;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .heading {
+    color: #2c3e50;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .flightsList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .flightItem {
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .flightName {
+    color: #2980b9;
+    font-size: 1.5em;
+    margin: 10px 0;
+  }
+  
+  .flightDetails {
+    color: #7f8c8d;
+    font-size: 1em;
+  }
+  
+  .bookButton {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+  }
+  
+  .bookButton:hover {
+    background-color: #2980b9;
+  }
+  
+  .noFlightsText {
+    color: #e74c3c;
+    text-align: center;
+    font-size: 1.2em;
+  }
+  
+  /* Responsive styles for screens 600px wide or less */
+  @media (max-width: 600px) {
+    .flightItem {
+      padding: 10px;
+    }
+    .bookButton {
+      padding: 8px 12px;
+      font-size: 0.9em;
+    }
+  }
+  

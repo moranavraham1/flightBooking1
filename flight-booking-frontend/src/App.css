@@ -22,17 +22,37 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px; /* Optional: Adds padding inside the header */
 }
 
 .App-link {
   color: #61dafb;
+  font-size: 1.5em;
+  margin: 10px 0; /* Space between the links */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-link:hover {
+  text-decoration: underline; /* Optional: Adds underline effect on hover */
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;  /* Stack buttons vertically */
+  gap: 20px;  /* Space between buttons */
+  margin-top: 20px;
+}
+
+.button {
+  background-color: #61dafb;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #4fa3f7; /* Darker shade of blue */
 }

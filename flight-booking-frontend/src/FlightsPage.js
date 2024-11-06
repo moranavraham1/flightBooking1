@@ -14,9 +14,12 @@ const FlightsPage = () => {
   }, []);
 
   const handleBooking = (flight) => {
-    axios.post('http://localhost:3000/api/bookings', { flightId: flight._id })
+    // Send flight's name instead of flightId
+    axios.post('http://localhost:3000/api/bookings', { flightName: flight.name })
       .then(response => {
         alert("Flight booked successfully!");
+        // Remove the booked flight from the available flights list
+        setFlights(flights.filter(f => f._id !== flight._id));
       })
       .catch(error => {
         alert("There was an error booking the flight.");

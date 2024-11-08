@@ -12,7 +12,12 @@ const MyBookingsPage = () => {
       .then(response => setBookedFlights(response.data))
       .catch(error => console.error("There was an error fetching bookings!", error));
   }, []);
-  
+
+  // Function to handle the immediate addition of booked flights
+  const addBooking = (flight) => {
+    setBookedFlights(prev => [...prev, flight]);
+  };
+
   return (
     <div>
       <h1>My Booked Flights</h1>

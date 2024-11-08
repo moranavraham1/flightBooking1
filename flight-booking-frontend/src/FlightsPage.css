@@ -1,73 +1,141 @@
-/* src/FlightsPage.css */
-
+/* Container and general styling */
 .container {
-    font-family: Arial, sans-serif;
-    padding: 200p;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .heading {
-    color: #2c3e50;
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-  }
-  
-  .flightsList {
-    display: flex;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Heading styling */
+.heading {
+  color: #2c3e50;
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* Search Form styling */
+.searchForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.searchInput {
+  flex: 1 1 200px;
+  padding: 8px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Enhanced Flights list styling for ticket look */
+.flightsList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.flightItem {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.flightDetailsWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center-aligns price and button */
+  width: 100%;
+  padding: 10px;
+}
+
+.priceTag {
+  font-size: 1.5em;
+  color: #2ecc71;
+  font-weight: bold;
+  margin-right: 15px; /* Spacing between price and button */
+  display: flex;
+  align-items: center; /* Centers price text vertically */
+}
+
+.bookButton {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px; /* Adjust padding to match height of price text */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.5em; /* Set same font size as price for height consistency */
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center; /* Centers text inside button vertically */
+}
+
+.bookButton:hover {
+  background-color: #2980b9;
+}
+
+.flightName {
+  color: #2980b9;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.flightDetails {
+  color: #7f8c8d;
+  font-size: 1em;
+}
+
+.priceTag {
+  font-size: 1.5em;
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.bookButton {
+  background-color: #3498db;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.bookButton:hover {
+  background-color: #2980b9;
+}
+
+/* No flights available text */
+.noFlightsText {
+  color: #e74c3c;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+/* Responsive styling for small screens */
+@media (max-width: 600px) {
+  .searchForm {
     flex-direction: column;
-    gap: 15px;
   }
-  
-  .flightItem {
-    background-color: #ecf0f1;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  .searchInput {
+    width: 100%;
   }
-  
-  .flightName {
-    color: #2980b9;
-    font-size: 1.5em;
-    margin: 10px 0;
-  }
-  
-  .flightDetails {
-    color: #7f8c8d;
-    font-size: 1em;
-  }
-  
   .bookButton {
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
+    font-size: 0.9em;
   }
-  
-  .bookButton:hover {
-    background-color: #2980b9;
-  }
-  
-  .noFlightsText {
-    color: #e74c3c;
-    text-align: center;
-    font-size: 1.2em;
-  }
-  
-  /* Responsive styles for screens 600px wide or less */
-  @media (max-width: 600px) {
-    .flightItem {
-      padding: 10px;
-    }
-    .bookButton {
-      padding: 8px 12px;
-      font-size: 0.9em;
-    }
-  }
-  
+}

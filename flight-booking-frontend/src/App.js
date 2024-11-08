@@ -8,13 +8,13 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-      {<h2>Welcome to the Flight Booking App!</h2>} 
         <h1>Flight Booking App</h1>
-    
+        
         {/* Button-like Navigation Links */}
         <div className="button-container">
           <Link to="/flights" className="button">Available Flights</Link>
           <Link to="/my-bookings" className="button">My Bookings</Link>
+          <Link to="/" className="button">Home</Link> {/* Home Button at the end */}
         </div>
 
         {/* Routes */}

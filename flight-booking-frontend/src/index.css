@@ -46,19 +46,26 @@ h1, h2 {
 }
 
 /* Button styling */
-button {
-  background-color: #007bff;
+button, .button {
+  background-color: #61dafb; /* תכלת */
   color: #fff;
   border: none;
-  padding: 10px 16px;
+  padding: 10px 0; /* פחות גובה כללי */
+  width: 150px; /* רוחב אחיד */
+  height: 45px; /* גובה אחיד */
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+  text-decoration: none; /* עבור קישורים עם class "button" */
+  display: inline-flex;
+  justify-content: center; /* מרכז את הטקסט אופקית */
+  align-items: center; /* מרכז את הטקסט אנכית */
 }
 
-button:hover {
-  background-color: #0056b3;
+button:hover, .button:hover {
+  background-color: #4fa3f7; /* תכלת כהה יותר */
   transform: scale(1.05);
 }
 
@@ -88,22 +95,9 @@ nav ul li a:hover {
 /* Button container styling */
 .button-container {
   display: flex;
-  flex-direction: column;  /* Stack buttons vertically */
-  gap: 20px;  /* Space between buttons */
+  flex-direction: row; /* Stack buttons horizontally */
+  align-items: center; /* Center align buttons */
+  justify-content: center; /* Center buttons horizontally */
+  gap: 15px; /* Space between buttons */
   margin-top: 20px;
-}
-
-.button {
-  background-color: #61dafb;
-  padding: 10px 20px;
-  font-size: 1.2em;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  display: inline-block;
-  text-align: center;
-}
-
-.button:hover {
-  background-color: #4fa3f7; /* Darker shade of blue */
 }
